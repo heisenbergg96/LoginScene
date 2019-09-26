@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Login {
+class LoginViewModel {
     
     var sections: [Section] = []
     let numberOfSection = 3
@@ -20,14 +20,27 @@ class Login {
             sections.append(Section(type: section))
         }
     }
-}
-
-class LoginViewModel {
     
-    var login: Login
+    func row(for indexPath: IndexPath) -> RowViewModel {
+        
+        return sections[indexPath.section].rows[indexPath.row]
+    }
     
-    init(login: Login) {
-        self.login = login
+    func heightOfRow(at indexPath: IndexPath, viewHeight: CGRect?) -> CGSize {
+        
+        return sections[indexPath.section].rows[indexPath.row].rowHeight(viewHeight: viewHeight)
+    }
+    
+    func referencesizeforHeader(in section: Int) -> CGSize {
+        
+        return sections[section].type.spacing
+    }
+    
+    func reuseIdentifier(for indexPath: IndexPath) -> String {
+        
+        let identifier = row(for: indexPath).cellIdentifier
+        
+        return identifier
     }
 }
 

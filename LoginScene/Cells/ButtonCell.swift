@@ -17,4 +17,16 @@ class ButtonCell: UICollectionViewCell, CellConfigurable {
         
     }
     
+    @IBAction func signInButtonTapped(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func contactUs(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func locationTapped(_ sender: UIButton) {
+        
+    }
+    
 }

@@ -11,7 +11,7 @@ import UIKit
 class LoginViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     @IBOutlet weak var collectionViewBottomConstraint: NSLayoutConstraint!
-    let login = Login()
+    let loginviewModel = LoginViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,7 @@ class LoginViewController: UIViewController, UICollectionViewDelegateFlowLayout,
     @objc func handleTap() {
        
         (UIApplication.shared.delegate as? AppDelegate)?.window?.endEditing(true)
-        loginCollectionview.reloadData()
+        //loginCollectionview.reloadData()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -58,43 +58,29 @@ class LoginViewController: UIViewController, UICollectionViewDelegateFlowLayout,
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
-        return login.sections.count
+        return loginviewModel.sections.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return login.sections[section].rows.count
+        return loginviewModel.sections[section].rows.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let row = login.sections[indexPath.section].rows[indexPath.row]
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cellIdentifier(for: row), for: indexPath)
+        let cellIdentifier = loginviewModel.reuseIdentifier(for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
         
         if let cell = cell as? CellConfigurable {
-            cell.setup(viewModel: row)
+            cell.setup(viewModel: loginviewModel.row(for: indexPath))
         }
+        
         return cell
     }
-    
-    private func cellIdentifier(for viewModel: RowViewModel) -> String {
         
-        switch viewModel {
-            
-        case is RememberMeRow:
-            return RememberMeCell.reuseIdentifier
-        case is ButtonRow:
-            return ButtonCell.reuseIdentifier
-        case is TextFieldRow:
-            return TextFieldCell.reuseIdentifier
-        default:
-            fatalError("Unexpected view model type: \(viewModel)")
-        }
-    }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let size = login.sections[indexPath.section].rows[indexPath.row].rowHeight(viewHeight: view?.frame)
+        let size = loginviewModel.heightOfRow(at: indexPath, viewHeight: view.frame)
         
         return size
     }
@@ -107,7 +93,7 @@ class LoginViewController: UIViewController, UICollectionViewDelegateFlowLayout,
             return CGSize(width: collectionView.frame.width, height: height)
         }
         
-        let headersize = login.sections[section].type.spacing
+        let headersize = loginviewModel.referencesizeforHeader(in: section)
         
         return headersize
     }
@@ -132,6 +118,11 @@ class LoginViewController: UIViewController, UICollectionViewDelegateFlowLayout,
         
         let top: CGFloat = (section == 0) ? 20 : 0
         return UIEdgeInsets(top: top, left: 0, bottom: 0, right: 0)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        print(scrollView.contentOffset.y)
     }
     
     @objc func handleSignIn() {

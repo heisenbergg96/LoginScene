@@ -12,6 +12,7 @@
 		DF1DB00A22FD6C19000CBE79 /* ButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1DB00922FD6C19000CBE79 /* ButtonRow.swift */; };
 		DF1DB00C22FD6C40000CBE79 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1DB00B22FD6C40000CBE79 /* Row.swift */; };
 		DF1DB00F22FD6C87000CBE79 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1DB00E22FD6C87000CBE79 /* Section.swift */; };
+		DF1DB01322FD7E54000CBE79 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1DB01222FD7E54000CBE79 /* Observable.swift */; };
 		DF2281A022F4857000614B34 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF22819F22F4857000614B34 /* TextFieldCell.swift */; };
 		DF2281A222F4858000614B34 /* RememberMeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2281A122F4858000614B34 /* RememberMeCell.swift */; };
 		DF2281A422F4858D00614B34 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2281A322F4858D00614B34 /* ButtonCell.swift */; };
@@ -19,6 +20,7 @@
 		DF2281A922F7D7D100614B34 /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2281A822F7D7D100614B34 /* FloatingTextField.swift */; };
 		DF2281AC22F7F68500614B34 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2281AB22F7F68500614B34 /* UICollectionView.swift */; };
 		DF2281AF22F7F8C100614B34 /* LoginVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2281AE22F7F8C100614B34 /* LoginVCViewModel.swift */; };
+		DF327030233A17FE000DB0E1 /* LoginFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF32702F233A17FE000DB0E1 /* LoginFlowLayout.swift */; };
 		DF6241BA22F43AAC0002BBD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6241B922F43AAC0002BBD2 /* AppDelegate.swift */; };
 		DF6241BC22F43AAC0002BBD2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6241BB22F43AAC0002BBD2 /* LoginViewController.swift */; };
 		DF6241BF22F43AAC0002BBD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF6241BD22F43AAC0002BBD2 /* Main.storyboard */; };
@@ -32,6 +34,7 @@
 		DF1DB00922FD6C19000CBE79 /* ButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRow.swift; sourceTree = "<group>"; };
 		DF1DB00B22FD6C40000CBE79 /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
 		DF1DB00E22FD6C87000CBE79 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		DF1DB01222FD7E54000CBE79 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		DF22819F22F4857000614B34 /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		DF2281A122F4858000614B34 /* RememberMeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RememberMeCell.swift; sourceTree = "<group>"; };
 		DF2281A322F4858D00614B34 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
@@ -39,6 +42,7 @@
 		DF2281A822F7D7D100614B34 /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 		DF2281AB22F7F68500614B34 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		DF2281AE22F7F8C100614B34 /* LoginVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVCViewModel.swift; sourceTree = "<group>"; };
+		DF32702F233A17FE000DB0E1 /* LoginFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlowLayout.swift; sourceTree = "<group>"; };
 		DF6241B622F43AAC0002BBD2 /* LoginScene.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginScene.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF6241B922F43AAC0002BBD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF6241BB22F43AAC0002BBD2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +70,7 @@
 				DF1DB00522FD6BAF000CBE79 /* TextFieldRow.swift */,
 				DF1DB00922FD6C19000CBE79 /* ButtonRow.swift */,
 				DF1DB00B22FD6C40000CBE79 /* Row.swift */,
+				DF1DB01222FD7E54000CBE79 /* Observable.swift */,
 			);
 			path = RowViewModel;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 		DF2281A722F7D7BC00614B34 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DF32702F233A17FE000DB0E1 /* LoginFlowLayout.swift */,
 				DF6241BD22F43AAC0002BBD2 /* Main.storyboard */,
 				DF6241C222F43AAE0002BBD2 /* LaunchScreen.storyboard */,
 				DF2281A822F7D7D100614B34 /* FloatingTextField.swift */,
@@ -236,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF2281AF22F7F8C100614B34 /* LoginVCViewModel.swift in Sources */,
+				DF1DB01322FD7E54000CBE79 /* Observable.swift in Sources */,
 				DF2281A222F4858000614B34 /* RememberMeCell.swift in Sources */,
 				DF2281A622F4859F00614B34 /* HeaderView.swift in Sources */,
 				DF1DB00F22FD6C87000CBE79 /* Section.swift in Sources */,
@@ -249,6 +256,7 @@
 				DF2281A022F4857000614B34 /* TextFieldCell.swift in Sources */,
 				DF1DB00A22FD6C19000CBE79 /* ButtonRow.swift in Sources */,
 				DF1DB00822FD6BE0000CBE79 /* RememberMeRow.swift in Sources */,
+				DF327030233A17FE000DB0E1 /* LoginFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,12 +10,24 @@ import UIKit
 
 class ButtonRow: Row, RowViewModel {
     
-    override init(ratio: CGFloat, type: RowType) {
+    var cellIdentifier: String = {
+        
+        return ButtonCell.reuseIdentifier
+    }()
+    
+    var signInButtonTapped: (() -> Void)? = nil
+    
+    init(ratio: CGFloat, type: RowType, signInButtonTapped: (() -> Void)? = nil) {
+        
         super.init(ratio: ratio, type: type)
+        self.signInButtonTapped = signInButtonTapped
+        
     }
     
     func rowHeight(viewHeight: CGRect?) -> CGSize {
         guard let viewHeight = viewHeight else { return .zero }
         return CGSize(width: viewHeight.width, height: ratio)
     }
+    
+    
 }

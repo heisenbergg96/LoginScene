@@ -10,7 +10,6 @@ import UIKit
 
 class TextFieldRow: Row, RowViewModel {
     
-    
     var isForgotPasswordVisible: Bool
     var placeholderText: String
     var isSecuretextEntry: Bool
@@ -29,4 +28,9 @@ class TextFieldRow: Row, RowViewModel {
         guard let viewHeight = viewHeight else { return .zero}
         return CGSize(width: viewHeight.width, height: ratio * viewHeight.height)
     }
+    
+    var cellIdentifier: String = {
+       
+        TextFieldCell.reuseIdentifier
+    }()
 }

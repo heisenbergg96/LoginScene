@@ -10,13 +10,11 @@ import UIKit
 
 class RememberMeRow: Row, RowViewModel {
     
-    var isEnabledTouchId: Bool
-    var isEnabledRememberme: Bool
+    var isEnabledTouchId: Observable<Bool> = Observable<Bool>(value: false)
+    var isEnabledRememberme: Observable<Bool> = Observable<Bool>(value: false)
     
     init(size: CGFloat, type: RowType, isEnabledTouchId: Bool, isEnabledRememberme: Bool) {
         
-        self.isEnabledTouchId = isEnabledTouchId
-        self.isEnabledRememberme = isEnabledRememberme
         super.init(ratio: size, type: type)
         
     }
@@ -27,4 +25,8 @@ class RememberMeRow: Row, RowViewModel {
         return CGSize(width: viewHeight.width, height: ratio * viewHeight.height)
     }
     
+    var cellIdentifier: String = {
+        
+        return RememberMeCell.reuseIdentifier
+    }()
 }

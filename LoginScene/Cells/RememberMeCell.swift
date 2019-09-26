@@ -11,6 +11,7 @@ import UIKit
 protocol RowViewModel {
     
     func rowHeight(viewHeight: CGRect?) -> CGSize
+    var cellIdentifier: String { get }
 }
 
 protocol CellConfigurable {
@@ -27,7 +28,15 @@ class RememberMeCell: UICollectionViewCell, CellConfigurable {
     
     func setup(viewModel: RowViewModel) {
         
-       
+        
+    }
+    
+    @IBAction func rememberMeTapped(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func enableTouchIdTapped(_ sender: UIButton) {
+        
     }
     
 }

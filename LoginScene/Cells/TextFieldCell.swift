@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TextFieldCell: UICollectionViewCell, CellConfigurable {
+class TextFieldCell: UICollectionViewCell, CellConfigurable, UITextFieldDelegate {
     
     @IBOutlet weak var textField: FloatingTextField!
     @IBOutlet weak var dividerView: UIImageView!
@@ -24,4 +24,10 @@ class TextFieldCell: UICollectionViewCell, CellConfigurable {
         forgotPasswordButton.isHidden = !textfieldRow.isForgotPasswordVisible
         textField.isSecureTextEntry = textfieldRow.isSecuretextEntry
     }
+    
+    @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
+        
+    }
+    
+    
 }

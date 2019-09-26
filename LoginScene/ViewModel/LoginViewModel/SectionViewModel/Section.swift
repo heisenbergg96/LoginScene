@@ -92,6 +92,7 @@ class Section {
             let rowType = type.rowType
             if type == .TextField {
                 rows.append(TextFieldRow(isForgotPasswordVisible: false, placeholderText: rowType.placeholderInTextField(index: i), size: type.heightOfRow, type: rowType, isSecureTextEntry: rowType.isSecureTextEntry(index: i)))
+                
             } else if rowType == .Checkbox {
                 rows.append(RememberMeRow(size: type.heightOfRow, type: rowType, isEnabledTouchId: false, isEnabledRememberme: false))
             } else if rowType == .Button {
